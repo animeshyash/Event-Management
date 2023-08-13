@@ -115,7 +115,14 @@ function App() {
           ]}
         />
         <Route path={"/addevent"} element={<Form />} />
-        <Route path={"/details"} element={<Details eventId={eventId} />} />
+        <Route
+          path={"/details"}
+          element={
+            <Details
+              eventId={eventId}
+            />
+          }
+        />
         <Route
           path={"/registerparticipant"}
           element={<Register eventId={eventId} />}

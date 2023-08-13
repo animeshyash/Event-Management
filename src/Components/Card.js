@@ -15,19 +15,24 @@ export const Card = ({ data, removeEvent, getEventId }) => {
         <p className="semi_para">{data.location}</p>
         <p className="semi_para">{data.startdate}</p>
         <Link to={"/details"}>
-        <button className="btn_" onClick={() => getEventId(data.eventId)}>
-          Event Details
-        </button>
+          <button
+            className="btn_"
+            onClick={() => {
+              getEventId(data.eventId);
+            }}
+          >
+            Event Details
+          </button>
         </Link>
         <Link to={"/registerparticipant"}>
-          <button
-            className="btn_two"
-            onClick={() => getEventId(data.eventId)}
-          >
+          <button className="btn_two" onClick={() => getEventId(data.eventId)}>
             Register Participant
           </button>
         </Link>
-        <AiFillDelete onClick={() => removeEvent(data.eventId)} className="icon"/>
+        <AiFillDelete
+          onClick={() => removeEvent(data.eventId)}
+          className="icon"
+        />
       </div>
     </div>
   );

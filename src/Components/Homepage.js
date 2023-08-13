@@ -8,7 +8,8 @@ export const Homepage = ({ data, location, removeEvent, getEventId }) => {
   // const removeEvent = props.removeEvent;
   // const data = props.data;
   // console.log(data);
-  console.log(removeEvent);
+  // console.log(getEvent);
+  // console.log(removeEvent);
   return (
     <div>
       <div className="div__1">
