@@ -1,4 +1,5 @@
 import React from "react";
+import "./Filter.css"
 
 export const Filter = (props) => {
   const location = props.location;
@@ -11,13 +12,13 @@ export const Filter = (props) => {
   }
 
   return (
-    <div className="flex space-x-4 justify-center mt-6">
-      <div className="flex items-baseline text-[1.2rem]">
+    <div className="filter_div_1">
+      <div className="filter_div_2">
         {buttonArray.map((data) => (
           <button
-            className={`mr-5 p-1 px-2 rounded-md text-white text-[1.0rem]
-            ${location === data ? "bg-red-500" : "bg-blue-500"}
-            `}
+            className={`${location === data ? "filter_btn_active" : "filter_btn"}`}
+            // ${location === data ? "bg-red-500" : "bg-blue-500"}
+            // `}
             key={data.index}
             onClick={() => locationHandle(data)}
           >

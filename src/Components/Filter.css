@@ -1,0 +1,31 @@
+.filter_div_1{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.filter_div_2{
+    display: flex;
+    align-items: baseline;
+    font-size: 19.2px;
+}
+
+.filter_btn{
+    margin-right: 20px;
+    padding: 4px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(59 130 246);
+}
+
+.filter_btn_active{
+    margin-right: 20px;
+    padding: 4px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(239 68 68);
+}

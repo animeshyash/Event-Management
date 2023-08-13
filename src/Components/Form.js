@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Form.css";
 
 export const Form = () => {
   const [data, setData] = useState({
@@ -18,15 +19,26 @@ export const Form = () => {
     }));
   }
 
+  // async function postData() {
+  //   const finalData = data;
+  //   const response = await fetch("url", {
+  //     method: "POST", // *GET, POST, PUT, DELETE, etc.
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(finalData), // body data type must match "Content-Type" header
+  //   });
+  // }
+
   return (
-    <div className="flex justify-center items-center mt-10">
-      <form className="w-2/5 p-2 border border-black rounded-md">
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="eventId" className="text-[1.3rem]">
+    <div className="form_div_1">
+      <form className="form_div_2">
+        <div className="form_div_3">
+          <label htmlFor="eventId" className="form_label">
             Enter Event ID :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="form_input"
             type="text"
             name="eventId"
             id="eventId"
@@ -34,12 +46,12 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="eventName" className="text-[1.3rem]">
+        <div className="form_div_3">
+          <label htmlFor="eventName" className="form_label">
             Enter Event Name :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="form_input"
             type="text"
             name="eventName"
             id="eventName"
@@ -47,12 +59,12 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="eventDescription" className="text-[1.3rem]">
+        <div className="form_div_3">
+          <label htmlFor="eventDescription" className="form_label">
             Enter Event Description :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="form_input"
             type="text"
             name="eventDescription"
             id="eventDescription"
@@ -60,12 +72,12 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="eventStatus" className="text-[1.3rem]">
+        <div className="form_div_3">
+          <label htmlFor="eventStatus" className="form_label">
             Enter Status :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="form_input"
             type="text"
             name="eventStatus"
             id="eventStatus"
@@ -73,12 +85,12 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="eventStartDate" className="text-[1.3rem]">
+        <div className="form_div_3">
+          <label htmlFor="eventStartDate" className="form_label">
             Enter Start Date :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="form_input"
             type="text"
             name="eventStartDate"
             id="eventStartDate"
@@ -86,12 +98,12 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="eventEndDate" className="text-[1.3rem]">
+        <div className="form_div_3">
+          <label htmlFor="eventEndDate" className="form_label">
             Event End Date :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="form_input"
             type="text"
             name="eventEndDate"
             id="eventEndDate"
@@ -99,12 +111,12 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="eventLocation" className="text-[1.3rem]">
+        <div className="form_div_3">
+          <label htmlFor="eventLocation" className="form_label">
             Enter Location :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="form_input"
             type="text"
             name="eventLocation"
             id="eventLocation"
@@ -112,8 +124,8 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex justify-center mt-2">
-          <button className="w-full p-1 rounded-md bg-blue-500 text-white text-[1.0rem] mt-2">
+        <div className="form_div_4">
+          <button className="form_btn">
             Submit
           </button>
         </div>

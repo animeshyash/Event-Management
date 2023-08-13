@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "./Register.css";
 
-export const Register = () => {
+export const Register = ({ eventId }) => {
   const [data, setData] = useState({
     participantId: "",
     participantFirstName: "",
@@ -10,6 +11,8 @@ export const Register = () => {
     emailAddress: "",
   });
 
+  console.log(eventId);
+
   function handleChange(event) {
     setData((prevData) => ({
       ...prevData,
@@ -17,14 +20,14 @@ export const Register = () => {
     }));
   }
   return (
-    <div className="flex justify-center items-center mt-10">
-      <form className="w-2/5 p-2 border border-black rounded-md">
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="participantId" className="text-[1.3rem]">
+    <div className="div_1">
+      <form className="div_2">
+        <div className="div_3">
+          <label htmlFor="participantId" className="label">
             Enter Participant ID :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="input"
             type="text"
             name="participantId"
             id="participantId"
@@ -32,12 +35,12 @@ export const Register = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="participantFirstName" className="text-[1.3rem]">
+        <div className="div_3">
+          <label htmlFor="participantFirstName" className="label">
             Enter Participant First Name :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="input"
             type="text"
             name="participantFirstName"
             id="participantFirstName"
@@ -45,12 +48,12 @@ export const Register = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="participantLastName" className="text-[1.3rem]">
+        <div className="div_3">
+          <label htmlFor="participantLastName" className="label">
             Enter Participant Last Name :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="input"
             type="text"
             name="participantLastName"
             id="participantLastName"
@@ -58,12 +61,12 @@ export const Register = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="organization" className="text-[1.3rem]">
+        <div className="div_3">
+          <label htmlFor="organization" className="label">
             Enter Organization :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="input"
             type="text"
             name="organization"
             id="organization"
@@ -71,12 +74,12 @@ export const Register = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="designation" className="text-[1.3rem]">
+        <div className="div_3">
+          <label htmlFor="designation" className="label">
             Enter Designation :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="input"
             type="text"
             name="designation"
             id="designation"
@@ -84,12 +87,12 @@ export const Register = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex items-center justify-between mt-2">
-          <label htmlFor="emailAddress" className="text-[1.3rem]">
+        <div className="div_3">
+          <label htmlFor="emailAddress" className="label">
             Event Email Address :
           </label>
           <input
-            className="border-black border ml-2 p-2 rounded-md h-8"
+            className="input"
             type="text"
             name="emailAddress"
             id="emailAddress"
@@ -97,8 +100,8 @@ export const Register = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="text-[1rem] flex justify-center mt-2">
-          <button className="w-full p-1 rounded-md bg-blue-500 text-white text-[1.0rem] mt-2">
+        <div className="btn_div">
+          <button className="btn">
             Submit
           </button>
         </div>
@@ -106,3 +109,9 @@ export const Register = () => {
     </div>
   );
 };
+
+//  flex justify-center items-center mt-10
+//  w-2/5 p-2 border border-black rounded-md
+//  div_3
+// label
+// input

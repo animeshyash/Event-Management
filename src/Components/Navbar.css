@@ -1,0 +1,30 @@
+.outer_div {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  margin: 8px 0;
+  border-bottom: 2px solid rgb(107 114 128);
+}
+
+.para {
+  margin: 8px;
+  font-size: 24px;
+}
+
+.inner_div {
+  display: flex;
+  margin: 5px;
+  justify-content: space-evenly;
+  width: 15%;
+}
+
+.btn {
+  padding: 4px;
+  border-radius: 6px;
+  background-color: rgb(59 130 246);
+  margin-right: 10px;
+  font-size: 16px;
+  color: white;
+}

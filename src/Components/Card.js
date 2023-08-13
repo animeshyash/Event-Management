@@ -1,16 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { AiFillDelete } from "react-icons/ai";
+import "./Card.css";
 
-export const Card = (props) => {
-  const data = props.data;
+export const Card = ({ data, removeEvent, getEventId }) => {
+  //const data = props.data;
+  // const removeEvent = props.removeEvent;
+
   return (
-    <div className="border-2 border-gray-800 m-2 w-1/5 h-min rounded-md">
-      <div className="my-3 flex flex-col items-center">
-        <p className="my-2 text-[1.5rem] font-bold">{data.eventName}</p>
-        <p className="my-2 text-[1.2rem] font-semibold">{data.location}</p>
-        <p className="my-2 text-[1.2rem] font-semibold">{data.startdate}</p>
-        <button className="my-2 p-1 px-2 rounded-md bg-blue-500 text-white text-[1rem]">
-          Read More
+    <div className="div___1">
+      <div className="div___2">
+        <p className="para_">{data.eventId}</p>
+        <p className="para_">{data.eventName}</p>
+        <p className="semi_para">{data.location}</p>
+        <p className="semi_para">{data.startdate}</p>
+        <Link to={"/details"}>
+        <button className="btn_" onClick={() => getEventId(data.eventId)}>
+          Event Details
         </button>
+        </Link>
+        <Link to={"/registerparticipant"}>
+          <button
+            className="btn_two"
+            onClick={() => getEventId(data.eventId)}
+          >
+            Register Participant
+          </button>
+        </Link>
+        <AiFillDelete onClick={() => removeEvent(data.eventId)} className="icon"/>
       </div>
     </div>
   );

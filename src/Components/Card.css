@@ -1,0 +1,53 @@
+.div___1{
+    border: 2px solid rgb(31,41,55);
+    margin-top: 8px;
+    width: 25%;
+    height: min-content;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.div___2{
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.para_{
+    margin: 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.semi_para{
+    margin: 8px 0;
+    font-size: 19.2px;
+    font-weight: 600;
+}
+
+.btn_{
+    margin: 8px 0;
+    padding: 4px;
+    padding: 0 8px;
+    border-radius: 6px;
+    background-color: rgb(59 130 246);
+    color: white;
+    font-size: 16px;
+}
+
+.btn_two{
+    padding: 4px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    border-radius: 6px;
+    background-color: rgb(59 130 246);
+    color: white;
+    font-size: 16px;
+}
+
+.icon{
+    font-size: 20px;
+}
