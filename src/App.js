@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { Homepage } from "./Components/Homepage";
+import { Navbar } from "./Components/Navbar";
+import { Filter } from "./Components/Filter";
+import { Form } from "./Components/Form";
+import { Register } from "./Components/Register";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
+  const [location, setLocation] = useState("All");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route
+          path={"/"}
+          element={[
+            <Filter location={location} setLocation={setLocation} />,
+            <Homepage location={location} />,
+          ]}
+        />
+        <Route path={"/addevent"} element={<Form />} />
+        <Route path={"/registerparticipant"} element={<Register />} />
+      </Routes>
+      {/* <Filter location={location} setLocation={setLocation}/> */}
+      {/* <Homepage location={location}/> */}
+      {/* <Form /> */}
     </div>
   );
 }
